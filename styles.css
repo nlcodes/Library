@@ -29,7 +29,8 @@ nav {
 .book-card {
   display: flex;
   justify-content: center;
-  max-width: 30vw;
+  max-height: 200px;
+  min-height: 200px;
   flex-direction: column;
   background-color: white;
   border: 2px solid black;
