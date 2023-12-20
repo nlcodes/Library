@@ -14,14 +14,14 @@
   padding: 1em;
   border: 2px solid black;
   border-radius: 10px;
-  background-color: black;
+  background-color: #f3f4f6;
 }
 
 nav {
   border: 2px solid black;
   display: flex;
-  text-align: center;
   background-color: black;
+  justify-content: center;
   color: white;
   box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.2)
 }
@@ -32,6 +32,7 @@ nav {
   max-width: 30vw;
   flex-direction: column;
   background-color: white;
+  border: 2px solid black;
 }
 
 ul {
@@ -52,7 +53,7 @@ li {
 
 .grid-container {
   display: grid;
-  grid-template-rows: 0.5fr 0.5fr 9fr;
+  grid-template-rows: 0.5fr 0.5fr 9fr 0.5fr;
   min-height: 100vh;
 }
 
@@ -61,4 +62,16 @@ li {
   justify-content: center;
   align-items: center;
  }
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p, h1 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
 
