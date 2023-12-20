@@ -6,7 +6,8 @@
 
 #books {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fill, 1fr);
   max-width: 80vw;
   justify-self: center;
   gap: 1em;
@@ -24,7 +25,6 @@ nav {
   justify-content: center;
   max-width: 30vw;
   flex-direction: column;
-  max-height: 25vh;
 }
 
 ul {
@@ -46,7 +46,7 @@ li {
 .grid-container {
   display: grid;
   grid-template-rows: 1fr 9fr;
-  border: 1px solid black;
+  border: 1px solid red;
   min-height: 100vh;
 }
 
