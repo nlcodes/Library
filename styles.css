@@ -2,29 +2,36 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Georgia, Times New Roman;
 }
 
 #books {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(auto-fill, 1fr);
-  max-width: 80vw;
   justify-self: center;
   gap: 1em;
   padding: 1em;
-  border: 1px solid green;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: black;
 }
 
 nav {
-  border: 1px solid black;
+  border: 2px solid black;
+  display: flex;
+  text-align: center;
+  background-color: black;
+  color: white;
+  box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.2)
 }
 
 .book-card {
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   max-width: 30vw;
   flex-direction: column;
+  background-color: white;
 }
 
 ul {
@@ -45,8 +52,13 @@ li {
 
 .grid-container {
   display: grid;
-  grid-template-rows: 1fr 9fr;
-  border: 1px solid red;
+  grid-template-rows: 0.5fr 0.5fr 9fr;
   min-height: 100vh;
 }
+
+#add-book-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
 
