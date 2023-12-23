@@ -22,11 +22,13 @@ function displayBooks() {
     const pages = document.createElement("li");
     const readBoolButton = document.createElement("button");
     const removeButton = document.createElement("button");
-    readBoolButton.classList.add("read-bool-button")
-    removeButton.classList.add("remove-button")
+    readBoolButton.classList.add("btn-danger")
+    readBoolButton.classList.add("btn")
+    readBoolButton.classList.add("book-btn")
+
 
     readBoolButton.textContent = "Read"
-    removeButton.textContent = "remove"
+    removeButton.textContent = "Remove"
 
     title.textContent = "Title: " + book.title;
     author.textContent = "Author: " + book.author;

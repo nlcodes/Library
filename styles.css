@@ -76,3 +76,8 @@ p, h1 {
   margin: 0;
 }
 
+.book-btn {
+  width: 60%;
+  align-self: center;
+  margin-bottom: 2em;
+}
