@@ -20,26 +20,33 @@ function displayBooks() {
     const title = document.createElement("li");
     const author = document.createElement("li");
     const pages = document.createElement("li");
-    const readBoolButton = document.createElement("button");
+    const checkLi = document.createElement("li");
+    const removeLi = document.createElement("li");
+
+    const readBoolCheck = document.createElement("input");
     const removeButton = document.createElement("button");
-    readBoolButton.classList.add("btn-danger")
-    readBoolButton.classList.add("btn")
-    readBoolButton.classList.add("book-btn")
-
-
-    readBoolButton.textContent = "Read"
-    removeButton.textContent = "Remove"
+    
+    removeButton.classList.add("btn");
+    removeButton.classList.add("btn-danger");
+    removeButton.classList.add("book-btn");
+    readBoolCheck.type = "checkbox";
+    readBoolCheck.classList.add("checkbox");
 
     title.textContent = "Title: " + book.title;
     author.textContent = "Author: " + book.author;
     pages.textContent = "Pages: " + book.pages.toString();
+    checkLi.textContent = "Read: ";
+    removeButton.textContent = "X";
     
     books.appendChild(bookCard);
     bookCard.appendChild(list);
     list.appendChild(title);
     list.appendChild(author);
     list.appendChild(pages);
-    bookCard.appendChild(readBoolButton);
+    list.appendChild(checkLi);
+    list.appendChild(removeLi);
+    checkLi.appendChild(readBoolCheck);
+    removeLi.appendChild(removeButton);
   }
 }
 
