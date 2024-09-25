@@ -11,6 +11,13 @@ function addBookToLibrary() {
   
 }
 
+function removeBook(index) {
+  console.log("success")
+  myLibrary.splice(index, 1);
+  displayBooks();
+}
+
+
 function displayBooks() {
   for (const book of myLibrary) {
     const books = document.getElementById("books");
@@ -32,6 +39,9 @@ function displayBooks() {
     readBoolCheck.type = "checkbox";
     readBoolCheck.classList.add("checkbox");
 
+    removeButton.addEventListener("click", removeBook(index))
+    book.index = 
+
     title.textContent = "Title: " + book.title;
     author.textContent = "Author: " + book.author;
     pages.textContent = "Pages: " + book.pages.toString();
@@ -50,4 +60,7 @@ function displayBooks() {
   }
 }
 
+
 displayBooks();
+
+
