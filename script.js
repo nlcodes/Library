@@ -1,4 +1,5 @@
-const myLibrary = [{title: "Moby Dick", author: "Herman Melville", pages: 625, read: false}];
+
+const myLibrary = [{ title: "Moby Dick", author: "Herman Melville", pages: 625, read: false }];
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -8,22 +9,24 @@ function Book(title, author, pages, read) {
 }
 
 function addBookToLibrary() {
-  
+  // Add logic here to add a new book to the library
 }
 
 function removeBook(index) {
-  console.log("success")
-  myLibrary.splice(index, 1);
-  displayBooks();
+  console.log("Removing book at index:", index);
+  myLibrary.splice(index, 1); // Remove the book from the array
+  displayBooks(); // Redisplay the updated library
 }
 
-
 function displayBooks() {
-  for (const book of myLibrary) {
-    const books = document.getElementById("books");
+  const books = document.getElementById("books");
+  books.innerHTML = ''; // Clear existing content before rendering
+
+  myLibrary.forEach((book, index) => {
     const bookCard = document.createElement("div");
     bookCard.classList.add("book-card");
-    const list = document.createElement("ul")
+
+    const list = document.createElement("ul");
     const title = document.createElement("li");
     const author = document.createElement("li");
     const pages = document.createElement("li");
@@ -32,22 +35,20 @@ function displayBooks() {
 
     const readBoolCheck = document.createElement("input");
     const removeButton = document.createElement("button");
-    
-    removeButton.classList.add("btn");
-    removeButton.classList.add("btn-danger");
-    removeButton.classList.add("book-btn");
+
+    removeButton.classList.add("btn", "btn-danger", "book-btn");
     readBoolCheck.type = "checkbox";
     readBoolCheck.classList.add("checkbox");
 
-    removeButton.addEventListener("click", removeBook(index))
-    book.index = 
+    // Add event listener with an anonymous function
+    removeButton.addEventListener("click", () => removeBook(index));
 
     title.textContent = "Title: " + book.title;
     author.textContent = "Author: " + book.author;
     pages.textContent = "Pages: " + book.pages.toString();
     checkLi.textContent = "Read: ";
     removeButton.textContent = "X";
-    
+
     books.appendChild(bookCard);
     bookCard.appendChild(list);
     list.appendChild(title);
@@ -57,10 +58,8 @@ function displayBooks() {
     list.appendChild(removeLi);
     checkLi.appendChild(readBoolCheck);
     removeLi.appendChild(removeButton);
-  }
+  });
 }
 
-
+// Initially display the books
 displayBooks();
-
-
