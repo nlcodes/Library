@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Georgia, Times New Roman;
+
+  font-family: 'Avenir', sans-serif;
 }
 
 #books-container {
@@ -44,10 +45,14 @@ nav {
 
 .my-modal {
   z-index: 1000;
-  max-height: 300px;
-  max-width: 300px;
-  background-color: red;
-  position: absolute; 
+  min-height: 400px;
+  min-width: 400px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  align-self: center;
+  left: 50vw;
+  transform: translateX(-50%);
 }
 
 ul {
