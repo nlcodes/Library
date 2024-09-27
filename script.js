@@ -13,7 +13,6 @@ function addBookToLibrary() {
 }
 
 function removeBook(index) {
-  console.log("Removing book at index:", index);
   myLibrary.splice(index, 1); // Remove the book from the array
   displayBooks(); // Redisplay the updated library
 }
@@ -40,7 +39,7 @@ function displayBooks() {
     readBoolCheck.type = "checkbox";
     readBoolCheck.classList.add("checkbox");
 
-    // Add event listener with an anonymous function
+    // Add event listener with an anonymous function; anon function lets you delay the function being executed until the event happens
     removeButton.addEventListener("click", () => removeBook(index));
 
     title.textContent = "Title: " + book.title;
@@ -48,6 +47,13 @@ function displayBooks() {
     pages.textContent = "Pages: " + book.pages.toString();
     checkLi.textContent = "Read: ";
     removeButton.textContent = "X";
+
+    const modal = document.querySelector("#modal");
+    const openModal = document.querySelector("#add-book-btn");
+
+    openModal.addEventListener("click", () => {
+      modal.show();
+    })
 
     books.appendChild(bookCard);
     bookCard.appendChild(list);
