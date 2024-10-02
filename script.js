@@ -59,7 +59,7 @@ function displayBooks() {
     const closeModalBtns = document.querySelectorAll(".close-modal-button");
 
     openModal.addEventListener("click", () => {
-      modal.show();
+      modal.showModal();
     })
     
     closeModalBtns.forEach((btn) => {

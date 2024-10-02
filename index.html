@@ -27,21 +27,27 @@
       </div>
 
       <footer>
-        <p>&copy; pythoniszen 2023</p>
+        <p>&copy; pythoniszen 2024</p>
       </footer>
 
       <dialog class="my-modal" id="modal">
 
         <form id="book-data" method="dialog">
 
-          <label>Title<input type="text" id="title" name="title"></input></label>
-          <label>Author<input type="text" id="author" name="author"></input></label>
-          <label>Pages<input type="text" id="pages" name="pages"></input></label>
-          <button type="submit" class="btn btn-success close-modal-button">Add</button>
+          <label>Title: <input type="text" id="title" name="title"></input></label>
+          <label>Author: <input type="text" id="author" name="author"></input></label>
+          <label>Pages: <input type="text" id="pages" name="pages"></input></label>
+
+          <div id="modal-btns-container">
+            <button type="submit" class="btn btn-success close-modal-button">Add</button> 
+            <button class="btn btn-danger close-modal-button">Cancel</button>
+
+
+          </div>
 
         </form>
 
-        <button class="btn btn-danger close-modal-button">Cancel</button>
+        
       </dialog>     
 
     </div>

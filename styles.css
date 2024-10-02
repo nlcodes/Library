@@ -45,8 +45,8 @@ nav {
 
 .my-modal {
   z-index: 1000;
-  min-height: 400px;
-  min-width: 400px;
+  min-height: 200px;
+  min-width: 200px;
   background-color: black;
   color: white;
   position: absolute;
@@ -61,8 +61,26 @@ nav {
 }
 
 form {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  justify-content: center;
+  align-items: center;
+}
 
+label {
+  padding: 1em;
+}
 
+#modal-btns-container {
+  display: flex;
+  min-width: 100%;
+  gap: 1em;
+}
+
+.close-modal-button {
+  padding: 5px;
+  flex: 1;
 }
 
 ul {
