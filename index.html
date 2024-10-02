@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale="1.0"">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     
     <!-- Bootstrap CSS -->
@@ -31,26 +31,20 @@
       </footer>
 
       <dialog class="my-modal" id="modal">
-        <h1>New Book</h1>
 
-        <h3>Title</h3>
-        <input type="text"></input>
+        <form id="book-data" method="dialog">
 
-        <h3>Author</h3>
-        <input type="text"></input>
+          <label>Title<input type="text" id="title" name="title"></input></label>
+          <label>Author<input type="text" id="author" name="author"></input></label>
+          <label>Pages<input type="text" id="pages" name="pages"></input></label>
+          <button type="submit" class="btn btn-success close-modal-button">Add</button>
 
-        <h3>Pages</h3>
-        <input type="text"></input>
-
-
-
-        <form method="dialog">
-          <button class="btn btn-danger">Cancel</button>
         </form>
+
+        <button class="btn btn-danger close-modal-button">Cancel</button>
       </dialog>     
 
     </div>
-
     
     <script src="script.js"></script>
   </body>
