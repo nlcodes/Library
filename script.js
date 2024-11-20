@@ -11,17 +11,10 @@ function Book(title, author, pages, read) {
   this.read = read;
 }
 
-function addBookToLibrary() {
-  // Add logic here to add a new book to the library
-}
-
 function removeBook(index) {
   myLibrary.splice(index, 1); // Remove the book from the array
   displayBooks(); // Redisplay the updated library
 }
-
-
-
 
 function displayBooks() {
   const books = document.getElementById("books");
@@ -44,6 +37,14 @@ function displayBooks() {
     removeButton.classList.add("btn", "btn-danger", "book-btn");
     readBoolCheck.type = "checkbox";
     readBoolCheck.classList.add("checkbox");
+
+    // Set checkbox state with book's read property
+    readBoolCheck.checked = book.read;
+
+    // Event listener to update read property
+    readBoolCheck.addEventListener("change", () => {
+      book.read = readBoolCheck.checked;
+    }); 
 
     // Add event listener with an anonymous function; anon function lets you delay the function being executed until the event happens
     removeButton.addEventListener("click", () => removeBook(index));
@@ -68,7 +69,6 @@ function displayBooks() {
 
       });      
     });
-    
 
     books.appendChild(bookCard);
     bookCard.appendChild(list);
